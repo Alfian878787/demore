@@ -1,0 +1,23 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/javascript"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+- package-ecosystem: bundler
+  directory: "/ruby"
+  schedule:
+    interval: weekly
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: business
+    versions:
+    - 2.1.0
+    - 2.2.0
